@@ -11,7 +11,7 @@
 - Correr la aplicación
     node ace serve --watch
 - Consumir la api con con la operación register para crear token y consumir el resto de operaciones
-    - El metodo es POST y se debe enviar email y password
+    - El metodo es POST, se deben enviar los parametros email y password. Ejemplo(email=prueba@gmail.com,password=admin123)
       http://127.0.0.1:3333/register
     - la respuesta es un json con la siguiente estructura 
       {"token": {
