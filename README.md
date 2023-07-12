@@ -8,9 +8,9 @@
     npm install
 - Ejecutar las migraciones
     node ace migration:run
-  4.Correr la aplicación
+- Correr la aplicación
     node ace serve --watch
-  5.Consumir la api con con la operación register para crear token y consumir el resto de operaciones
+- Consumir la api con con la operación register para crear token y consumir el resto de operaciones
     - El metodo es POST y se debe enviar email y password
       http://127.0.0.1:3333/register
     - la respuesta es un json con la siguiente estructura 
@@ -19,7 +19,7 @@
        "token": "MQ.WIy81nHK5xjDjvJXaOrm0mhR0Jc_JyvEWZKIiaQSmuC7NAT-1PD_1W2dN9Vl",
        "expires_at": "2023-07-21T23:25:02.754-05:00"
       }}
-  6.Para consumir la operación listar todos los usuarios se debe usar el endpoint
+- Para consumir la operación listar todos los usuarios se debe usar el endpoint
     - El metodo para consumir la api es GET y se debe enviar en  header la siguiente estructura con el token de la api anterior
       Authorization	bearer MQ.WIy81nHK5xjDjvJXaOrm0mhR0Jc_JyvEWZKIiaQSmuC7NAT-1PD_1W2dN9Vl
       accept	application/json 
