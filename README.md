@@ -1,32 +1,32 @@
 #Consumo de Api
 #Pasos para correr el proyecto
 
-1.0 Crear base de datos en mysql con el nombre de api-adonis
-  CREATE DATABASE IF NOT EXISTS `api-adonis` /*!40100 DEFAULT CHARACTER SET utf8 */;
-  el usuario y clave de la base de datos debe ser root
-1.Descargar el repositorio con el siguiente comando
-  git clone https://github.com/alejandrovalencias/i4digital.git
-2.Installar las depencias
-  npm install
-3. Ejecutar las migraciones
-  node ace migration:run
-4.Correr la aplicación
-  node ace serve --watch
-5.Consumir la api con con la operación register para crear token y consumir el resto de operaciones
-  - El metodo es POST y se debe enviar email y password
-    http://127.0.0.1:3333/register
-  - la respuesta es un json con la siguiente estructura 
-    {"token": {
-     "type": "bearer",
-     "token": "MQ.WIy81nHK5xjDjvJXaOrm0mhR0Jc_JyvEWZKIiaQSmuC7NAT-1PD_1W2dN9Vl",
-     "expires_at": "2023-07-21T23:25:02.754-05:00"
-    }}
-6.Para consumir la operación listar todos los usuarios se debe usar el endpoint
-  - El metodo para consumir la api es GET y se debe enviar en  header la siguiente estructura con el token de la api anterior
-    Authorization	bearer MQ.WIy81nHK5xjDjvJXaOrm0mhR0Jc_JyvEWZKIiaQSmuC7NAT-1PD_1W2dN9Vl
-    accept	application/json 
-  - http://127.0.0.1:3333/api/listar-usuarios
-  - Tendremos una respuesta con la siguiente estrcutura si el consumo fue exitoso y los datos se podran ver en la tabla usuarios
+  1.0 Crear base de datos en mysql con el nombre de api-adonis
+    CREATE DATABASE IF NOT EXISTS `api-adonis` /*!40100 DEFAULT CHARACTER SET utf8 */;
+    el usuario y clave de la base de datos debe ser root
+  1.Descargar el repositorio con el siguiente comando
+    git clone https://github.com/alejandrovalencias/i4digital.git
+  2.Installar las depencias
+    npm install
+  3.Ejecutar las migraciones
+    node ace migration:run
+  4.Correr la aplicación
+    node ace serve --watch
+  5.Consumir la api con con la operación register para crear token y consumir el resto de operaciones
+    - El metodo es POST y se debe enviar email y password
+      http://127.0.0.1:3333/register
+    - la respuesta es un json con la siguiente estructura 
+      {"token": {
+       "type": "bearer",
+       "token": "MQ.WIy81nHK5xjDjvJXaOrm0mhR0Jc_JyvEWZKIiaQSmuC7NAT-1PD_1W2dN9Vl",
+       "expires_at": "2023-07-21T23:25:02.754-05:00"
+      }}
+  6.Para consumir la operación listar todos los usuarios se debe usar el endpoint
+    - El metodo para consumir la api es GET y se debe enviar en  header la siguiente estructura con el token de la api anterior
+      Authorization	bearer MQ.WIy81nHK5xjDjvJXaOrm0mhR0Jc_JyvEWZKIiaQSmuC7NAT-1PD_1W2dN9Vl
+      accept	application/json 
+    - http://127.0.0.1:3333/api/listar-usuarios
+    - Tendremos una respuesta con la siguiente estrcutura si el consumo fue exitoso y los datos se podran ver en la tabla usuarios
      {"respuesta": "Los datos fueron consultados y luego guardados con el id:1 en base de datos",
        "id": 1,
        "datos":    [
