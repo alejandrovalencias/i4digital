@@ -1,6 +1,6 @@
 #Consumo de Api
-
 #Pasos para correr el proyecto
+
 1.0 Crear base de datos en mysql con el nombre de api-adonis
   CREATE DATABASE IF NOT EXISTS `api-adonis` /*!40100 DEFAULT CHARACTER SET utf8 */;
   el usuario y clave de la base de datos debe ser root
