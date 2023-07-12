@@ -1,14 +1,12 @@
 #Consumo de Api
-#Pasos para correr el proyecto
-
-  - Crear base de datos en mysql con el nombre de api-adonis
+- Crear base de datos en mysql con el nombre de api-adonis
     CREATE DATABASE IF NOT EXISTS `api-adonis` /*!40100 DEFAULT CHARACTER SET utf8 */;
     el usuario y clave de la base de datos debe ser root
-  -Descargar el repositorio con el siguiente comando
+- Descargar el repositorio con el siguiente comando
     git clone https://github.com/alejandrovalencias/i4digital.git
-  -Installar las depencias
+- Installar las depencias
     npm install
-  3.Ejecutar las migraciones
+- Ejecutar las migraciones
     node ace migration:run
   4.Correr la aplicación
     node ace serve --watch
